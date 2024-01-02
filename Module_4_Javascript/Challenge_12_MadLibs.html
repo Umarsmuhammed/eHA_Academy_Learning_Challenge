@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
+ 
+    <h1>Mad Libs</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+    </ul>
+     
+    <button id="lib-button">Lib it!</button>
+      
+    <p>Generated story: 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+            var storyDiv = document.getElementById("story");
+            var noun = document.getElementById("noun").value;
+            var adjective = document.getElementById("adjective").value;
+            var person = document.getElementById("person").value;
+            
+storyDiv.innerHTML = "Once upon a time, there was a " + adjective  +" girl named <strong>" + noun +"</strong> who loved to draw.<br> "+ person +
+            "had a big box of crayons and " + person + " used them to make " + adjective + " pictures of <strong>" + person +"</strong> family, friends, and pets.<br> One day, "+noun+
+            "decided to draw something new. <strong>" + noun +"</strong> wanted to draw a rainbow, but she didn't know how. <br>" + noun + 
+            "asked her mother for help, but her mother was busy cooking dinner.<strong>" + noun +"</strong> asked her father for help, <br> but he was busy working on his laptop. " + noun + 
+            "asked her brother for help, but he was busy playing video games.<br> <strong>" + noun +"</strong> felt " + adjective +
+            "and lonely. <strong>" + noun +"</strong> wished she had someone to teach her how to draw a rainbow."
+          };
+        libButton.addEventListener('click', libIt);
+        
+    </script>
+  
+ </body>
+</html>
